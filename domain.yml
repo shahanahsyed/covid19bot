@@ -1,0 +1,68 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- corona_state
+- show_the_list
+- feedback
+entities:
+- state
+- showlist
+- feedback
+slots:
+  message:
+    type: unfeaturized
+  state:
+    type: text
+responses:
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_feedback:
+  - text: I would love to improve. You can always send your feedback/screenshots to
+      covid19voicebot@gmail.com Thank you :)
+  - text: Like/Dislike me? Please share your valuable feedback/screenshots to covid19voicebot@gmail.com
+      Thank you :)
+  - text: I love feedback :)! It helps me in serving you better! Please share your
+      thoughts/screenshots at covid19voicebot@gmail.com Thank you :)
+  utter_goodbye:
+  - text: Bye, Stay Safe!
+  utter_greet:
+  - text: Hi! I'm a covid-19 chatbot. Please enter any state or union territory or
+      India to see the covid-19 statistics. If confused, ask me, 'show me the list',
+      I will show you the list of options you can choose from!
+  utter_happy:
+  - text: Great, carry on!
+  utter_iamabot:
+  - text: Sorry! I didn't get that. Please rephrase your sentence so that I can understand.
+  - text: Oops! I didn't get that. I am a bot, and I'm improving day by day. Please
+      share your valuable feedback or screenshot at covid19voicebot@gmail.com
+  utter_show_the_list:
+  - text: "India\nAndhra Pradesh\nAndaman and Nicobar Islands\nArunachal Pradesh\n\
+      Assam\nBihar\nChandigarh\nChhattisgarh\nDardra and Nagar Haveli and Daman and\
+      \ Diu\nDelhi\nGoa\nGujarat\nHaryana\nHimachal Pradesh\nJammu and Kashmir\nJharkhand\n\
+      Karnataka\nKerala\nLadakh\nMadhya Pradesh\nMeghalaya\nMaharashtra\nManipur\n\
+      Mizoram\nNagaland\nOdisha\nPuducherry\nPunjab\nRajasthan\nSikkim\nTamilnadu\n\
+      Telangana\nTripura\nUttarakhand\nUttar Pradesh\nWest Bengal"
+  utter_sorry:
+  - text: Sorry! I've just started. Please give me sometime to perform better!
+actions:
+- action_corona_tracker
+- utter_cheer_up
+- utter_did_that_help
+- utter_feedback
+- utter_goodbye
+- utter_greet
+- utter_happy
+- utter_iamabot
+- utter_show_the_list
+- utter_sorry
